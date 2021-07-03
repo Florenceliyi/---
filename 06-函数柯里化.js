@@ -53,9 +53,7 @@
 
 
 function _curry(fn,len,...args) {
-    console.log('_curry的this:',this);
     return function (...params) {
-        console.log('内部的this1:',this);
         let _args = [...args,...params];
         if(_args.length >= len){
             return fn.apply(this,_args);
